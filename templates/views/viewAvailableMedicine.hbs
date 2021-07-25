@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Spread Smiles</title>
+
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    
+    <link href="/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+      <link href="/css/lightbox.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+  </head>
+
+  <script>
+    function showModal(name, address, phone, medicines ,quantity,expiry, id) {
+      $("#id1").html('Name: ' + name);
+      $("#id2").html('Address: ' + address);
+      $("#id3").html('Phone: ' + phone);
+      $("#id4").html('Medicines: ' + medicines);
+      $("#id5").html('Quantity: ' + quantity);
+      $("#id6").html('Expiry date: ' + expiry);
+      
+    }
+     function collect_id(id) {
+      $('#btnclk').click(function() { 
+      location.href='/medicine/'+id;
+    });
+    }
+  </script>
+
+  <body ng-app="thankam">
+    {{>header}}
+
+  <div style="margin-top: 100px;">
+    <div class="container">
+      <div class="row">
+      {{#each Receivers}}
+    <div class="col-sm-3">
+      <div style="padding: 15px; background-color: white;" class="card">
+        <div class="card-body">
+          <h3 class="card-title">NGO name: {{ this.ngoname }}</h3>
+          <small>(This is the NGO to which you need to deliver the medicines)</small>
+          <p>Email: {{ this.email }}</p>
+          <p>Phone: {{ this.phone }}</p>
+          <p>Address: {{ this.address }}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    </div><br><br>
+    <div class="row">
+      {{#each Donors}}
+    <div class="col-sm-3">
+      <div style="padding: 15px; background-color: white;" class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{ this.name }}</h3>
+          <p>Address: {{ this.address }}</p>
+          <a a href="#" data-toggle="modal" data-target="#ModalLong" class="btn btn-primary" onclick="showModal( `{{ this.name }}`, `{{this.address}}`, `{{this.phone}}`, `{{this.medicines}}`, `{{this.quantity}}`, `{{this.expiry}}`, `{{this._id}}` )">Details</a>
+         <a href="#" data-toggle="modal" data-target="#Modal_collect" class="btn btn-primary" onclick="collect_id(`{{this._id}}`)">Collected?</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+    <div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">Details</h2>
+          </div>
+          <div class="modal-body">
+            <p id='id1'></p>
+            <p id='id2'></p>
+            <p id='id3'></p>
+            <p id='id4'></p>
+            <p id='id5'></p>
+            <p id='id6'></p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="Modal_collect" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">Confirm Delivery</h2>
+          </div>
+          <div class="modal-body">
+            <h4>Did you collect the medicine?</h4>
+            <button type="button" class="btn btn-primary" id="btnclk" >Yes</button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+  </div>
+  
+
+  {{>footer}}
+  
+  </body>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-ui-router.min.js"></script>      
+  <script src="/js/jquery-1.11.3.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/lightbox-plus-jquery.min.js"></script>
+  <script src="/js/script.js"></script>
+</html>

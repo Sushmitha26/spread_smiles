@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Spread Smiles</title>
+
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    
+    <link href="/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+      <link href="/css/lightbox.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+  </head>
+
+  <body ng-app="thankam">
+    {{>header}}
+    <br>
+    <br><br>
+ <div style="background-image: url('../images/img_vol.jpg');background-repeat:no-repeat;background-size:cover;height: 100%;">
+   <div class="registration-form">     
+      
+        <form action="/volunteer" method="post">
+            <h2 style="text-align: center;">Join us</h2>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="name" placeholder="Username" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="email" name="email" placeholder="Email" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="phone-number" name="phone" placeholder="Phone Number" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="address" name="address" placeholder="Address" required="">
+            </div>
+             <!--<div class="form-group">
+               <select name="choice" id="choice" class="form-control item" required="">
+                 <option value="">What would you like to deliver (Food/Medicine)?</option>
+                <option value="food">Food</option>
+                <option value="medicine">Medicine</option>
+              </select>
+            </div>-->
+            <div class="form-group">
+                <input type="password" class="form-control item" id="password" name="password" placeholder="Password" required="">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block create-account" value="Add Volunteer">Register</button><br>
+                <p>Already have an account? <a href="/login">Sign in</a></p>
+            </div>
+            
+        </form>
+       
+    </div>
+    <div style="text-align: center;background-color:white;"><br>
+            <h3>What we need from you?</h3>
+           <h4>Volunteers can collect medicines for weekly medicine drive.</h4>
+           <h4>Volunteers can deliver food.</h4>  
+           <br> 
+           </div>
+    </div>
+
+  {{>footer}}
+  
+</body>
+
+
+<script src="/js/angular.min.js"></script>
+<script src="/js/angular-ui-router.min.js"></script>      
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+<script src="/js/script.js"></script>
+</html>

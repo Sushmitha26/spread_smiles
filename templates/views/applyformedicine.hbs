@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Spread Smiles</title>
+
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    
+    <link href="/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+      <link href="/css/lightbox.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+  </head>
+<body ng-app="thankam">
+    {{>header}}
+
+
+<div class="home-cont">
+    <div class="container-fluid sldddd">
+      <br><br>
+      <div class="container">
+      <div class="row hed">
+           
+           <h2> Apply for medicines</h2>
+           </div> 
+            <p>We, at Spread smiles orgranization, really appreciate all the good social work done by the Non-profit organizations 
+                during these tough times. As an initiative to support Non-profit organizations, we conduct weekly medicine
+                 drives to collect the unused medicines from donors and deliver them to the organizations. We select an organization for week and deliver all the medicines collected
+                 during that week to them. If you are working for an NGO, you can apply for medicines in the form below.
+            </p>
+            <br>
+            <h4 style="text-align: center;">Note: Only Non-profit organizations can apply to the medicine drive</h4>
+      </div>
+      <div class="registration-form">     
+      
+        <form action="/applyformedicine" method="post">
+            <h3 style="text-align: center;">Apply now</h3>
+            <br>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="name" placeholder="Name" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="email" name="email" placeholder="Email" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="phone-number" name="phone" placeholder="Phone Number" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="ngoname" name="ngoname" placeholder="Name of the NGO" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="address" name="address" placeholder="Address" required="">
+            </div>             
+            <div class="form-group">
+                <button type="submit" class="btn btn-block create-account">Apply</button>
+            </div>
+            
+        </form>
+       
+      </div>
+    </div>
+</div>
+
+{{>footer}}
+  
+</body>
+
+
+
+  <script src="/js/angular.min.js"></script>
+<script src="/js/angular-ui-router.min.js"></script>      
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+<script src="/js/script.js"></script>
+</html>

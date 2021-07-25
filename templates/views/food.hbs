@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Spread Smiles</title>
+
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    
+    <link href="/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet"/>
+      <link href="/css/lightbox.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+  </head>
+
+  <script>
+    var collectId;
+    function showModal(name, address, phone, fooditems, serves, id,recv_name, recv_phone,recv_address,recv_type) {
+      $("#id1").html('Name: ' + name);
+      $("#id2").html('Address: ' + address);
+      $("#id3").html('Phone: ' + phone);
+      $("#id4").html('Food Items: ' + fooditems);
+      $("#id5").html('People it can serve: ' + serves);
+       $("#id7").html('Name: ' + recv_name);
+      $("#id9").html('Phone: ' + recv_phone);
+      $("#id8").html('Address: ' + recv_address);
+      $("#id10").html('Receiver type: ' + recv_type);
+    }
+    function collect_id(id) {
+      $('#btnclk').click(function() { 
+      location.href='/collect/'+id;
+    });
+    }
+
+  </script>
+
+  <body ng-app="thankam">
+    {{>header}}
+
+  <div style="margin-top: 100px;">
+    <div class="container">
+    <div class="row">
+      {{#each Donors}}
+      <script>
+        var id=this._id;
+      </script>
+    <div class="col-sm-3">
+      <div style="padding: 15px; background-color: white;" class="card">
+        <div class="card-body">
+          <h3 class="card-title">Donor:{{ this.donor }}</h3>
+          <p>Address: {{ this.donor_address }}</p>
+          <h3 class="card-title">Receiver:{{ this.receiver }}</h3>
+          <p>Address: {{ this.receiver_address }}</p>
+          <a href="#" data-toggle="modal" data-target="#ModalLong" class="btn btn-primary" onclick="showModal( `{{ this.donor }}`, `{{this.donor_address}}`, `{{this.phone}}`, `{{this.food_items}}`, `{{this.serves}}`, `{{this._id}}`,
+          `{{ this.receiver }}`, `{{this.recv_phone}}`, `{{this.receiver_address}}`,`{{this.recv_type}}`)">Details</a>
+           <a href="#" data-toggle="modal" data-target="#Modal_collect" class="btn btn-primary" onclick="collect_id(`{{this._id}}`)">Delivered?</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+    <div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">Details</h2>
+          </div>
+          <div class="modal-body">
+            <div class="details">
+            <div style="margin-right: 150px;">
+            <h4>Donor details</h4>
+            <p id='id1'></p>
+            <p id='id2'></p>
+            <p id='id3'></p>
+            <p id='id4'></p>
+            <p id='id5'></p>
+            <p id='id6'></p>
+            </div>
+            <div class="ml-auto">
+            <h4>Receiver details</h4>
+            <p id='id7'></p>
+            <p id='id8'></p>
+            <p id='id9'></p>
+            <p id='id10'></p>
+            </div>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Modal_collect" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">Confirm Delivery</h2>
+          </div>
+          <div class="modal-body">
+            <h4>Did you deliver the food?</h4>
+            <button type="button" class="btn btn-primary" id="btnclk" >Yes</button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  
+
+  {{>footer}}
+  
+  </body>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-ui-router.min.js"></script>      
+  <script src="/js/jquery-1.11.3.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/lightbox-plus-jquery.min.js"></script>
+  <script src="/js/script.js"></script>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Thankam Foundation</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+      <link href="assets/css/lightbox.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+  </head>
+  <body ng-app="thankam">
+   
+      
+     
+      
+      
+        
+      
+      
+      <div style="z-index:99999" class="container-fluid">
+                      <div id="sm-menu" class="menu-sd">
+                        <div class="row menu-top-smd">
+                          <i onclick="hideSM()" class="fa fa-times"></i>
+                        </div>
+
+                            <ul  style="margin-top: 30px;" class="menu-itmen-sm">
+                                      <li onclick="hideSM()"  id="mm1" onlick="changeSelect(1)" class="active  mom"> <a href="index.html" >
+                                        <i class="fa fa-home"></i>
+                                         Home</a></li>
+
+                                       <li onclick="hideSM()" class="mom" id="mm2" onclick="changeSelect(2)" > <a href="aboutus.html">
+                                       <i class="fa fa-shield"></i>
+                                         About Us</a></li>   
+                                    
+                                     <li  onclick="hideSM()" class="mom" id="mm3" onclick="changeSelect(3)"  > <a href="supportus.html">
+                                         <i class="fa fa-credit-card"></i>
+                                         Support Us</a></li>
+                                     <li onclick="hideSM()" class="mom" id="mm4" onclick="changeSelect(4)"  > <a href="gallery.html">
+                                        <i class="fa fa-photo"></i>
+                                         Gallery</a></li>
+                                     <li onclick="hideSM()" class="mom" id="mm5" onclick="changeSelect(5)" > <a href="testimonial.html">
+                                         <i class="fa fa-user"></i>
+                                         Testimonials</a></li>
+                                     <li onclick="hideSM()" class="mom" id="mm6" onclick="changeSelect(6)" > <a href="news.html">
+                                         <i class="fa fa-newspaper-o"></i>
+                                         News</a></li>
+                                    <li onclick="hideSM()" class="mom" id="mm7"  onclick="changeSelect(7)"  > <a href="contactus.html">
+                                        <i class=" fa fa-map-marker"></i>
+                                        Contact Us</a></li>
+                                     
+                                </ul>
+
+                            
+                      </div>
+
+                <div class="mobile-head shado-1 visible-xs">
+                        <img style="width:50px;" class="logo" src="assets/images/logo.jpg">
+                            <h1 style="width:70%">Thankam Foundation</h1>
+                            <b style="margin-left: 4px;">social awareness foundation</b>
+
+                            <i onclick="showSM()" class="fa fa-navicon smal-menu-ico cp"></i>
+                </div>
+
+                <header class="hidden-xs">
+                    
+                    <nav style="position: absolute;" class="navmenu">
+                        <div style="margin:auto" >
+                            <div class="nav-content shado-1">
+
+                              <div class="container">
+                                <div style="height: 94px; overflow: hidden" class="col-md-4 col-sm-12">
+                                     <img style="width:90px;" class="logo" src="assets/images/logo.jpg">
+                                    <h1 style="width:70%">Thankam Foundation</h1>
+                                     <b style="margin-left: 4px;">social awareness foundation</b>
+                                 </div>
+                                  <div style="height: 94px; overflow: hidden"  class="col-md-8 hidden-sm">
+                                        
+                                      
+                                      <button data-toggle="modal" data-target="#myModal" class="btn btn-sm btn-donat"><i class="fa fa-inr"></i> Donate Now</button>
+                                      
+                                        <ul class="top-right">
+                                                <li ><i class="fa fa-linkedin-square"></i></li>
+
+                                                 <li><i class="fa fa-google-plus-square"></i></li>
+                                                 <li><i class="fa fa-tumblr-square"></i></li>
+                                                 <li><i class="fa fa-instagram"></i></li>
+                                                 <li class="bll-o"><i class="fa fa-facebook-square"></i></li>
+
+
+                                            </ul>
+
+                                            <div class="exu">
+                                               <i class="fa fa-phone"></i> :  +91 9442719300
+                                                <i style="margin-left: 30px;" class="fa fa-envelope"></i> :  info@thankamfoundation.org
+                                            </div>
+                                  </div>
+                             
+                                 
+                                
+                                </div>
+
+
+
+                                <div>
+                                      
+
+                                </div>
+                            </div>
+                            <div class="my-nav shado-1">
+                                <div class="container">
+                                    <ul  class="nav-menu1">
+                                      <li onclick="hideSM()"  id="mm1" onlick="changeSelect(1)" class="active  mom"> <a href="index.html" >
+                                        <i class="fa fa-home"></i>
+                                         Home</a></li>
+
+                                       <li onclick="hideSM()" class="mom" id="mm2" onclick="changeSelect(2)" > <a href="aboutus.html">
+                                       <i class="fa fa-shield"></i>
+                                         About Us</a></li>   
+                                    
+                                     <li  onclick="hideSM()" class="mom" id="mm3" onclick="changeSelect(3)"  > <a href="supportus.html">
+                                         <i class="fa fa-credit-card"></i>
+                                         Support Us</a></li>
+                                     <li onclick="hideSM()" class="mom" id="mm4" onclick="changeSelect(4)"  > <a href="gallery.html">
+                                        <i class="fa fa-photo"></i>
+                                         Gallery</a></li>
+                                     <li onclick="hideSM()" class="mom" id="mm5" onclick="changeSelect(5)" > <a href="testimonial.html">
+                                         <i class="fa fa-user"></i>
+                                         Testimonials</a></li>
+                                     <li onclick="hideSM()" class="mom" id="mm6" onclick="changeSelect(6)" > <a href="news.html">
+                                         <i class="fa fa-newspaper-o"></i>
+                                         News</a></li>
+                                    <li onclick="hideSM()" class="mom" id="mm7"  onclick="changeSelect(7)"  > <a href="contactus.html">
+                                        <i class=" fa fa-map-marker"></i>
+                                        Contact Us</a></li>
+                                     
+                                </ul>
+                                </div>
+                              
+                            </div>
+                            
+                            
+                        </div>
+                    </nav>
+                    <div class="header-top shado-6">
+                        <div style="z-index: 999999;" class="container">
+                        
+                        <ul class="top-left">
+                            <li class="rit-border"> Donate </li>
+                            <li class="rit-border"> Join Volunteer </li>
+                            <li> 9159449499 </li>
+                        </ul>
+                            
+                        
+                            <ul class="top-right">
+                                <li><i class="fa fa"></i></li>
+                                
+                                 
+                                
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                </header>
+          
+         
+          
+          
+          
+          
+          
+      </div>
+
+
+
+
+  <!---************************** Header content Ends Here ***************-->    
+
+
+ 
+
+
+<div ng-controller="homeCtrl" class="home-cont">
+
+
+
+
+<div  class="container-fluid sldddd">
+
+
+
+
+<div style="margin-top: 15px;" class="container tmon">
+            <div class="row hed">
+              
+              <h2 style="text-transform: none">XVI<sup>th</sup>  Draw (28/05/2016) </h2>
+            </div>
+          
+
+          
+
+          
+              
+              <div class="col-sm-9">
+                <div class="row">
+
+                 
+                  <div class="col-sm-12">
+                       <b>A. I<sup>st</sup> – Bajaj Discover (1Nos.) : G-0509 </b>
+                      <p style="text-indent: 70px;"></p>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                       <b>B. II<sup>rd</sup> LG DVD Player (10Nos.) :  </b>
+                      <p style="text-indent: 70px;">1. L-0580, 2. M-0258, 3. G-0602, 4. K-0567, 5. M-0392, 6. I-0795, 7. J-0259, 8. L-0216, 9. L-0813,  
+10. C-0016.
+</p>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                       <b>C. III<sup>rd</sup>Butterfly Wet Grinder (10Nos.) : </b>
+                      <p style="text-indent: 70px;">1. H-0620, 2. A-0080, 3. M-0241, 4. A-0716, 5. G-0388, 6. L-0530, 7. M-0575, 8. G-0701, 9. H-0009, 
+10. F-0559.
+</p>
+
+                  </div>
+
+                   <div class="col-sm-12">
+                       <b>D.  IV<sup>th</sup> Samsung J2 (3Nos.)  : A-0675, D-0443 & C-0931.</b>
+                      <p style="text-indent: 70px;"> 
+                
+                      </p>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                       <b>E.  V<sup>th</sup>  Gold Necklace (1No.)  : K-0141  </b>
+                      <p style="text-indent: 70px;">
+                   
+                      </p>
+
+                  </div>
+
+
+                 
+                 
+
+                  <div class="col-sm-12">
+                       <b>F. VI<sup>th</sup>– Rotti Maker (20Nos.)  :  </b>
+                      <p style="text-indent: 70px;">
+                          1. M-0010, 2. E-0314, 3. J-0755, 4. B-0094, 5. D-0236, 6. H-0500, 7. H-0120, 8. J-0238, 9. F-0275, 
+10. F-0874, 11. J-0193, 12. A-0607, 13. H-0531, 14. L-0747, 15. D-0500, 16. I-0986, 17. B-0067, 18. H-0220, 
+19. M-0063, 20. K-0369.
+
+                      </p>
+
+                  </div>
+
+                    <div class="col-sm-12">
+                       <b>G. VII<sup>th</sup>Cash Back (1No.)  :  I-0089</b>
+                      <p style="text-indent: 70px;">
+                         
+                      </p>
+
+                  </div>
+
+                    <div class="col-sm-12">
+                       <b>H. VIII<sup>th</sup>Hyndai i10 (1No.)   :  B-0860</b>
+                      <p style="text-indent: 70px;">
+                         
+                      </p>
+
+                  </div>
+
+                  
+                  
+
+
+  
+                 
+
+               
+
+
+
+                  
+
+                 
+                 
+                 
+
+                </div>
+
+
+
+
+
+               
+
+
+              </div>
+
+
+
+
+               <div class="col-sm-3">
+
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Google -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9723851646528434"
+     data-ad-slot="7346745907"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+               </div>
+
+
+ 
+        </div> 
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div style="margin-top: 15px;" class="container tmon">
+            <div class="row hed">
+              
+              <h2 style="text-transform: none">I<sup>st</sup>  Draw (13/02/2016)</h2>
+            </div>
+          
+
+          
+
+          
+              
+              <div class="col-sm-9">
+                <div class="row">
+
+                 
+                  <div class="col-sm-12">
+                       <b>A. I<sup>st</sup> Prize - Acer Laptop (1No.) : H-0290</b>
+                      <p style="text-indent: 70px;"></p>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                       <b>B. II<sup>nd</sup> Prize – LG LED TV (1No.) : I-0581</b>
+                      <p style="text-indent: 70px;"></p>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                       <b>C. III<sup>rd</sup>Prize – Gold Stud (2Nos.) : 1. 1. L-0242
+
+2. I-0565</b>
+                      <p style="text-indent: 70px;"></p>
+
+                  </div>
+
+                   <div class="col-sm-12">
+                       <b>D.  IV<sup>th</sup>Prize – Computer Table (5Nos.) :1. K-0164, 2. E-0043, 3. D-0264, 4. B-0197, 5. G-0720.</b>
+                      <p style="text-indent: 70px;"> 
+                    
+                      </p>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                       <b>E.  V<sup>th</sup>Prize – Dinner Set (20Nos.) : </b>
+                      <p style="text-indent: 70px;">
+                   1. E-0203, 2. M-0185, 3. H-0433, 4. L-0746, 5. L-0055, 6. J-0550, 7. D-0116, 8. E-0311, 
+
+9. G-0656, 10. E-0358, 11. C-0257, 12. B-0295, 13. A-0877, 14. E-0606, 15. A-0823, 16. B-0020, 
+
+17. G-0623, 18. A-0973, 19. H-0252, 20. B-0554.
+                      </p>
+
+                  </div>
+
+
+                 
+                 
+
+                  <div class="col-sm-12">
+                       <b>F. VI<sup>th</sup>Prize – Milk Cooker  (70Nos.) : </b>
+                      <p style="text-indent: 70px;">
+                     1. C-0712,  2. H-0989, 3. F-0634, 4. F-0311, 5. M-0379, 6. F-0889, 7. J-0903, 8. G-0132,
+
+9. A-0086, 10. L-0474, 11. D-0545, 12. B-0839, 13. F-0027, 14. A-0541, 15. H-0629, 16. A-0626, 
+
+17. K-0839, 18. I-0839, 19. J-0114, 20. H-0833, 21. K-0193, 22. D-0766, 23. D-0818, 24. A-0492, 
+
+25. H-0544, 26. E-0982, 27. D-0639, 28. J-0088, 29. D-0575, 30. L-0874, 31. E-0602, 32. H-0356, 
+
+33. E-0672, 34. M-0607, 35. E-0300, 36. H-0990, 37. F-0445, 38. F-0050, 39. G-0946, 40. D-0928, 
+
+41. C-0921, 42. B-0395, 43. A-0910, 44. M-0546, 45. L-0929, 46. C-0278, 47. G-0523, 48. K-0196, 
+
+49. H-0454, 50. I-0246, 51. H-0983, 52. G-0697, 53. F-0312, 54. E-0609, 55. B-0972, 56. G-0612, 
+
+57. I-0759, 58. I-0532, 59. K-0960, 60. E-0445, 61. J-0646, 62. J-0146, 63. F-0463, 64. E-0776, 65. 
+
+G-0480, 66. H-0071, 67. J-0555, 68. J-0089, 69. L-0539, 70. E-0506.
+                      </p>
+
+                  </div>
+
+                    <div class="col-sm-12">
+                       <b>G. VII<sup>th</sup> Prize – Nano Car (1No.) : J-0841</b>
+                      <p style="text-indent: 70px;">
+                    
+                      </p>
+
+                  </div>
+
+
+
+                 
+
+               
+
+
+
+                  
+
+                 
+                 
+                 
+
+                </div>
+
+
+
+
+
+               
+
+
+              </div>
+
+
+
+
+               <div class="col-sm-3">
+
+                <img style="wiidth:100%;" src="assets/images/1082059559.jpeg">
+               </div>
+
+
+ 
+        </div> 
+
+
+
+
+
+
+
+ 
+      
+      
+      
+      
+      
+      
+          
+          
+          
+          
+          
+          
+          
+ </div>        
+
+
+</div>
+
+
+  <!---************************** Body content Ends Here ***************-->  
+
+
+      <footer style="margin-top:25px;">
+    
+    <div class="container foot-cont">
+        <div class="col-sm-4">
+            <b>About Us</b>
+            <p>
+            Thankam Social Awareness Foundation Trust is for the purpose of carrying out the objects 
+
+hereinafter set out without any distinction of caste, color or creed. It has no profit motive.  With the sole 
+
+aim of involving in social charitable, religious, promotional, educational and cultural.
+            </p>
+        </div>
+         <div class="col-sm-3">
+            <b>Address</b>
+             
+             <p style="font-size:15px;">Thankam Foundation<br>
+             
+              1st Floor, Opp Padma Hospital <br>
+                 
+                  Near Bus Stand, Thiruvattar, <br>
+                 
+                  K.K District, Tamilnadu <br>
+                 
+                email:info@thankamfoundation.org
+ <br>
+             
+             </p>
+             
+        </div>
+        
+        <div class="col-sm-5 scmsug">
+            <b style="text-align:center; width:100%; margin-left:30%;">Working Hours</b>
+            <ul class="wh">
+                <li>Monday   <b> 9.30 AM to 6.00PM</b></li>
+                <li>Tuesday  <b> 9.30 AM to 6.00PM</b></li>
+                 <li>Wednesday  <b> 9.30 AM to 6.00PM</b></li>
+                 <li>Thursday  <b> 9.30 AM to 6.00PM</b></li>
+                 <li>Friday  <b> 9.30 AM to 6.00PM</b></li>
+                 <li>Saturday  <b> 9.30 AM to 6.00PM</b></li>
+            </ul>
+        </div>
+        
+        
+    </div>
+    
+     <div class=" smarti">
+            <div class="container">
+            <p>All Rights Reserved &copy; Thankam Foundation | Designed &amp; Developed By Smarteye
+                
+                <i class="fa fa-twitter fico-s hidden-xs"></i>
+                 <i class="fa fa-pinterest-p fico-s hidden-xs"></i>
+                 <i class="fa fa-google-plus fico-s hidden-xs"></i>
+                 <i class="fa fa-facebook fico-s hidden-xs"></i>
+                    
+                   
+                
+               
+                
+                
+                
+                </p>
+         
+                
+                
+         </div>
+        </div>
+    
+    </footer>
+      
+      
+      
+          
+          
+          
+          
+      
+      </div>
+       
+      
+      
+      
+      <div style="z-index: 999999; margin-top: 10%;" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div style="width:450px;" class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Donate Now</h4>
+      </div>
+      <div style="padding: 20px;" class="modal-body">
+        
+        <b>Indian Bank, Thiruvattar.</b><br>
+        <b>IFSC Code:IDIB000T155.</b><br>
+        <b>MICR Code:629019013.</b><br>
+        <b>Name:Kingsly T.</b><br>
+        <b>a/c No:6093117224.</b><br>
+      </div>
+     
+    </div>
+  </div>
+</div>
+      
+      
+      
+      
+
+  </body>
+
+
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/angular-ui-router.min.js"></script>      
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/lightbox-plus-jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+</html>
